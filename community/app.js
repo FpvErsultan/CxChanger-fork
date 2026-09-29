@@ -1,6 +1,7 @@
 (() => {
   const config = window.CXCHANGER_COMMUNITY_CONFIG || {};
-  const apiBase = (config.apiBase || "").replace(//$/, "");
+  const configuredBase = config.apiBase || "";
+  const apiBase = configuredBase.endsWith("/") ? configuredBase.slice(0, -1) : configuredBase;
   const MAX_MODEL_BYTES = 25 * 1024 * 1024;
   const MAX_IMAGE_BYTES = 5 * 1024 * 1024;
   const MODEL_EXTENSIONS = new Set(["stl", "step", "stp"]);
