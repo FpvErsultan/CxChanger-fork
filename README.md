@@ -1,3 +1,9 @@
+## 🧑‍🔧 玩家社区 / Community
+
+**上传模型和图片、分享作品、参与投票，无需会 Git：** [进入玩家作品分享区 →](https://github.com/ers-ye/CxChanger-fork/discussions/categories/%E7%8E%A9%E5%AE%B6%E4%BD%9C%E5%93%81%E5%88%86%E4%BA%AB)
+
+---
+
 ## 最新项目 / Project Update
 
 - [后置换热端项目（中文）](./后置换热端/README.md) | [English](./后置换热端/README_EN.md)
