@@ -1,0 +1,20 @@
+name = "cxchanger-community-api"
+main = "worker.js"
+compatibility_date = "2026-09-29"
+workers_dev = true
+
+[vars]
+ALLOWED_ORIGIN = "https://ers-ye.github.io"
+TURNSTILE_HOSTNAME = "ers-ye.github.io"
+
+[[r2_buckets]]
+binding = "MODELS"
+bucket_name = "cxchanger-community-files"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "cxchanger-community"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+[triggers]
+crons = ["15 3 * * *"]
