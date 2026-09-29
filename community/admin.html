@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>作品审核 · CxChanger 社区</title>
+<link rel="stylesheet" href="./style.css" />
+<link rel="stylesheet" href="./admin.css" />
+<script src="./config.js" defer></script>
+<script src="./admin.js" defer></script>
+</head>
+<body>
+<header class="site-header"><a class="brand" href="./"><span class="brand-mark">CX</span><span>CxChanger <small>作品审核</small></span></a><nav><a href="./">返回社区首页</a></nav></header>
+<main class="admin-main"><section class="admin-intro"><p class="eyebrow">COMMUNITY MODERATION</p><h1>审核新作品</h1><p>仅管理员使用。密钥只保存在当前页面内存中，关闭或刷新页面后需要重新输入。</p></section>
+<section class="admin-login" aria-label="管理员登录"><label for="admin-token">Cloudflare Worker 管理密钥</label><div class="admin-login-row"><input id="admin-token" type="password" autocomplete="off" placeholder="粘贴 ADMIN_TOKEN" /><button id="load-pending" class="button button-primary" type="button">查看待审核</button></div><p id="admin-message" role="status" aria-live="polite"></p></section>
+<section id="pending-list" class="pending-list" aria-live="polite"></section></main>
+<footer class="site-footer"><span>CxChanger 玩家社区</span><a href="https://github.com/ers-ye/CxChanger-fork">GitHub 项目主页</a></footer>
+</body>
+</html>
