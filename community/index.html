@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="CxChanger 玩家作品社区：直接上传 STL、STEP 模型和图片，分享、投票并收藏作品。" />
+<meta name="theme-color" content="#101820" />
+<title>CxChanger 玩家社区</title>
+<link rel="stylesheet" href="./style.css" />
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" defer></script>
+<script src="./config.js" defer></script>
+<script src="./app.js" defer></script>
+</head>
+<body>
+<header class="site-header"><a class="brand" href="../" aria-label="CxChanger 项目主页"><span class="brand-mark">CX</span><span>CxChanger <small>玩家社区</small></span></a><nav aria-label="主导航"><a href="#upload">分享作品</a><a href="#gallery">作品广场</a><a id="discussion-link" href="#">讨论区</a></nav></header>
+<main>
+<section class="hero"><div class="hero-copy"><p class="eyebrow">MAKER COMMUNITY · CxChanger</p><h1>把你的创意，<span>直接分享出来。</span></h1><p class="hero-intro">上传原始 STL / STEP 文件和作品图片，看看其他玩家做了什么。无需打包 ZIP，也无需会 Git。</p><div class="hero-actions"><a class="button button-primary" href="#upload">上传我的作品 <span aria-hidden="true">↓</span></a><a class="button button-secondary" id="hero-discussion-link" href="#">进入讨论区</a></div><p class="hero-note">社区作品通过审核后公开展示和下载。请只上传你有权公开分享的文件。</p></div><div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="art-core"><span>3D</span><i></i></div><div class="art-label art-label-one">STL</div><div class="art-label art-label-two">STEP</div><div class="art-label art-label-three">MAKE · SHARE</div></div></section>
+<section class="upload-section section" id="upload"><div class="section-heading"><div><p class="eyebrow">01 · SHARE</p><h2>发布你的作品</h2></div><p>选模型、加图片、写几句介绍，就能提交。</p></div><div id="setup-notice" class="notice notice-info" role="status" hidden>上传服务还在配置中。页面部署完成后，管理员需连接 Cloudflare 上传接口和 Turnstile，社区即可开始收稿。</div><div id="form-message" class="notice" role="status" aria-live="polite" hidden></div>
+<form id="upload-form" class="upload-card"><div class="form-grid"><label class="field"><span>作品名称 <b>*</b></span><input name="title" maxlength="80" required placeholder="例如：适配 Voron 2.4 的打印头支架" /></label><label class="field"><span>作者 / 昵称 <b>*</b></span><input name="author" maxlength="40" required placeholder="你希望展示的名字" /></label></div><label class="field"><span>作品说明</span><textarea name="description" maxlength="1200" rows="4" placeholder="写下适配机型、改动内容、打印材料或使用心得"></textarea><small>最多 1200 个字符</small></label>
+<div class="file-grid"><label class="file-picker" for="model-file"><span class="file-icon" aria-hidden="true">◇</span><strong>选择模型文件 <b>*</b></strong><span>直接选择 .STL、.STEP 或 .STP</span><span class="file-limit">单个文件最大 25 MB</span><span id="model-file-name" class="selected-file">还没有选择文件</span><input id="model-file" name="model" type="file" accept=".stl,.step,.stp,model/stl,application/step" required /></label><label class="file-picker" for="image-file"><span class="file-icon" aria-hidden="true">▧</span><strong>添加作品图片</strong><span>JPG、PNG 或 WebP，建议正面清晰照片</span><span class="file-limit">可选，单张最大 5 MB</span><span id="image-file-name" class="selected-file">还没有选择图片</span><input id="image-file" name="image" type="file" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp" /></label></div>
+<label class="consent-check"><input name="consent" type="checkbox" required /><span>我有权上传这些文件，并同意它们在玩家社区公开浏览和下载。</span></label><div id="turnstile-box" class="turnstile-box" aria-label="反垃圾验证"></div><div class="form-footer"><p>新作品通过审核后会出现在作品广场。</p><button id="submit-button" class="button button-primary" type="submit" disabled>提交审核 <span aria-hidden="true">→</span></button></div></form></section>
+<section class="gallery-section section" id="gallery"><div class="section-heading gallery-heading"><div><p class="eyebrow">02 · EXPLORE</p><h2>玩家作品广场</h2></div><div class="gallery-controls"><label for="sort-order" class="visually-hidden">排序方式</label><select id="sort-order"><option value="top">最受欢迎</option><option value="new">最新发布</option></select><button id="favorites-only" class="filter-button" type="button" aria-pressed="false">♡ 我的收藏</button></div></div><div id="gallery-status" class="gallery-status" role="status">正在加载作品…</div><div id="model-grid" class="model-grid"></div></section>
+<section class="community-cta"><div><p class="eyebrow">03 · TALK</p><h2>模型之外，也来聊聊你的改装思路。</h2><p>在 GitHub 讨论区提问、交流打印参数，也可以给喜欢的作品投票。</p></div><a class="button button-light" id="bottom-discussion-link" href="#">打开讨论区 <span aria-hidden="true">↗</span></a></section>
+</main><footer class="site-footer"><span>CxChanger 玩家社区</span><span>开源分享 · 尊重作者 · 安全打印</span><a href="https://github.com/ers-ye/CxChanger-fork">GitHub 项目主页</a></footer></body>
+</html>
