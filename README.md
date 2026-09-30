@@ -1,6 +1,6 @@
 ## 🧑‍🔧 玩家社区 / Community
 
-**上传模型和图片、分享作品、参与投票，无需会 Git：** [进入玩家作品分享区 →](https://github.com/ers-ye/CxChanger-fork/discussions/categories/%E7%8E%A9%E5%AE%B6%E4%BD%9C%E5%93%81%E5%88%86%E4%BA%AB)
+**上传模型和图片、分享作品、参与投票，无需会 Git：** [直接进入玩家作品社区（上传模型） →](https://ers-ye.github.io/cxchanger/community/) · [在 GitHub 讨论区交流](https://github.com/ers-ye/cxchanger/discussions)
 
 ---
 
